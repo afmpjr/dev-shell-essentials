@@ -30,7 +30,21 @@ source dev-shell-essentials.sh
 
 ### For ZSH users
 
-```shell
+#### Option 1
+
+If you cloned this repository as it is to your home directory, run ...
+
+```bash
+echo "source ~/dev-shell-essentials-master/highlight.sh" >> ~/.zshrc
+```
+
+Otherwise, update the path.
+
+#### Option 2
+
+Add the following to your `.zshrc` file
+
+```bash
 function highlight() {
 	declare -A fg_color_map
 	fg_color_map[black]=30
@@ -46,4 +60,5 @@ function highlight() {
 	sed -u s"/$2/$fg_c\0$c_rs/g"
 }
 ```
+
 > Thanks [@alexzanderr](https://github.com/alexzanderr) for [this workaround](https://github.com/kepkin/dev-shell-essentials/issues/5#issuecomment-898277655)
