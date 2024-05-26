@@ -1,11 +1,10 @@
-dev-shell-essentials
-====================
+# dev-shell-essentials
 
 ![Alt demo](https://github.com/kepkin/dev-shell-essentials/blob/master/demo.png "Example")
 
 ## Requirements
 
- * python with json module (almost all linux distro has it preinstalled)
+* python with json module (almost all linux distro has it preinstalled)
 
 ## Installation
 
@@ -23,7 +22,6 @@ Or using git
 git clone https://github.com/kepkin/dev-shell-essentials.git
 cd dev-shell-essentials
 source dev-shell-essentials.sh
-
 ```
 
 ## Optional steps
@@ -46,18 +44,18 @@ Add the following to your `.zshrc` file
 
 ```bash
 function highlight() {
-	declare -A fg_color_map
-	fg_color_map[black]=30
-	fg_color_map[red]=31
-	fg_color_map[green]=32
-	fg_color_map[yellow]=33
-	fg_color_map[blue]=34
-	fg_color_map[magenta]=35
-	fg_color_map[cyan]=36
-	 
-	fg_c=$(echo -e "\e[1;${fg_color_map[$1]}m")
-	c_rs=$'\e[0m'
-	sed -u s"/$2/$fg_c\0$c_rs/g"
+  declare -A fg_color_map
+  fg_color_map[black]=30
+  fg_color_map[red]=31
+  fg_color_map[green]=32
+  fg_color_map[yellow]=33
+  fg_color_map[blue]=34
+  fg_color_map[magenta]=35
+  fg_color_map[cyan]=36
+    
+  fg_c=$(echo -e "\e[1;${fg_color_map[$1]}m")
+  c_rs=$'\e[0m'
+  sed -u s"/$2/$fg_c\0$c_rs/g"
 }
 ```
 
