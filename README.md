@@ -33,7 +33,7 @@ source dev-shell-essentials.sh
 If you cloned this repository as it is to your home directory, run ...
 
 ```bash
-echo "source ~/dev-shell-essentials-master/highlight.sh" >> ~/.zshrc
+echo "source ~/dev-shell-essentials/highlight.sh" >> ~/.zshrc
 ```
 
 Otherwise, update the path.
